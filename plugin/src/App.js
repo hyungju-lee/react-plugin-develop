@@ -1,9 +1,9 @@
-import React, {lazy} from 'react';
+import React, {lazy, Suspense, useEffect} from 'react';
 import './scss/App.css';
 import {Nav, Navbar, NavDropdown, Form, FormControl, Button, Jumbotron} from 'react-bootstrap';
 import {Link, Route, Switch} from 'react-router-dom';
 
-let Scroll = lazy(() => { return import('./components/scroll_page')})
+let Scroll = lazy(() => { return import('./components/Scroll') });
 
 function App() {
     return (
@@ -28,7 +28,8 @@ function App() {
 
             <Route exact path="/">
                 <Jumbotron>
-                    <h1>Welcome FT DEV. UI 개발 1팀</h1>
+                    <h1>Welcome!!</h1>
+                    <h2>FT DEV. UI 개발 1팀</h2>
                     <p>플러그인 개발 페이지입니다.</p>
                 </Jumbotron>
             </Route>
@@ -39,7 +40,9 @@ function App() {
                 <div>플러그인페이지입니다.</div>
             </Route>
             <Route path="/plugins/scroll">
-                <Scroll />
+                <Suspense fallback={<div>로딩중입니다.</div>}>
+                    <Scroll/>
+                </Suspense>
             </Route>
         </div>
     );
