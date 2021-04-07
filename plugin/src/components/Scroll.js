@@ -12,7 +12,7 @@ function Scroll () {
     let [tab, tabEdit] = useState(0);
 
     useEffect(() => {
-        axios.get('/scroll-plugin.json')
+        axios.get('/react-plugin-page/scroll-plugin.json')
             .then((result) => {
                 const codeArr = [...code];
                 codeArr.push(result.data.scrollExample01.html);
@@ -27,8 +27,8 @@ function Scroll () {
         document.querySelector('.navbar').classList.add('fixed-top');
         const scriptTag = document.createElement('script');
         const scriptTag2 = document.createElement('script');
-        scriptTag.src = '/scroll-plugin.js';
-        scriptTag2.src = '/scroll-plugin-ex01.js';
+        scriptTag.src = '/react-plugin-page/scroll-plugin.js';
+        scriptTag2.src = '/react-plugin-page/scroll-plugin-ex01.js';
         document.body.appendChild(scriptTag);
         scriptTag.addEventListener('load', () => {
             document.body.appendChild(scriptTag2);
