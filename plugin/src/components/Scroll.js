@@ -36,6 +36,8 @@ function Scroll () {
 
         return () => {
             document.querySelector('.navbar').classList.remove('fixed-top');
+            document.body.removeChild(scriptTag);
+            document.body.removeChild(scriptTag2);
         }
     }, [])
     return (
