@@ -33,6 +33,10 @@ function Scroll () {
         scriptTag.addEventListener('load', () => {
             document.body.appendChild(scriptTag2);
         })
+
+        return () => {
+            document.querySelector('.navbar').classList.remove('fixed-top');
+        }
     }, [])
     return (
         <div>
