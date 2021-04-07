@@ -1,4 +1,4 @@
-import React, {lazy, Suspense, useEffect} from 'react';
+import React, {lazy, Suspense, useEffect, useState} from 'react';
 import './scss/App.css';
 import {Nav, Navbar, NavDropdown, Form, FormControl, Button, Jumbotron} from 'react-bootstrap';
 import {Link, Route, Switch} from 'react-router-dom';
@@ -15,14 +15,10 @@ function App() {
                     <Nav className="mr-auto">
                         <Nav.Link href="/introduce">Intro</Nav.Link>
                         <Nav.Link href="/plugins">Plugins</Nav.Link>
-                        <NavDropdown title="Dropdown" id="collasible-nav-dropdown">
+                        <NavDropdown title="Plugin Example" id="collasible-nav-dropdown">
                             <NavDropdown.Item href="/plugins/scroll">Scroll</NavDropdown.Item>
                         </NavDropdown>
                     </Nav>
-                    <Form inline>
-                        <FormControl type="text" placeholder="Search" className="mr-sm-2" />
-                        <Button variant="outline-info">Search</Button>
-                    </Form>
                 </Navbar.Collapse>
             </Navbar>
 
@@ -34,10 +30,10 @@ function App() {
                 </Jumbotron>
             </Route>
             <Route path="/introduce">
-                <div>소개페이지입니다.</div>
+                <div>플러그인 소개페이지입니다.</div>
             </Route>
             <Route exact path="/plugins">
-                <div>플러그인페이지입니다.</div>
+                <div>플러그인 페이지입니다.</div>
             </Route>
             <Route path="/plugins/scroll">
                 <Suspense fallback={<div>로딩중입니다.</div>}>

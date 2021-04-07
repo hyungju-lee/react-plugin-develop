@@ -8,6 +8,7 @@
   overflow: hidden;
 }
 .scroll-interaction {
+  /*IE에서 부드러운 인터렉션을 위해 이 요소에 position: relative 속성은 추가하지 말아주세요*/
   /*position: relative;*/
   box-sizing: border-box;
 }
