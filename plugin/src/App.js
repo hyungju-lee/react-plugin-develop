@@ -1,5 +1,5 @@
 import React, {lazy, Suspense, useEffect, useState} from 'react';
-import './scss/App.css';
+import './scss/App.scss';
 import {Nav, Navbar, NavDropdown, Form, FormControl, Button, Jumbotron} from 'react-bootstrap';
 import {Link, Route, Switch} from 'react-router-dom';
 
@@ -24,16 +24,30 @@ function App() {
             <Switch>
                 <Route exact path="/">
                     <Jumbotron>
-                        <h1>Welcome!!</h1>
-                        <h2>FT DEV. UI 개발 1팀</h2>
-                        <p>플러그인 개발 페이지입니다.</p>
+                        <section className="main-content">
+                            <h1 className="title">Welcome!!</h1>
+                            <h2 className="sub-title">FT DEV. UI 개발 1팀</h2>
+                            <p className="content">플러그인 소개 페이지입니다.</p>
+                        </section>
                     </Jumbotron>
                 </Route>
                 <Route path="/introduce">
-                    <div>플러그인 소개페이지입니다.</div>
+                    <Jumbotron>
+                        <section className="main-content">
+                            <h1 className="title">Intro</h1>
+                            <h2 className="sub-title"></h2>
+                            <p className="content"></p>
+                        </section>
+                    </Jumbotron>
                 </Route>
                 <Route exact path="/plugins">
-                    <div>플러그인 페이지입니다.</div>
+                    <Jumbotron>
+                        <section className="main-content">
+                            <h1 className="title">Plugins</h1>
+                            <h2 className="sub-title"></h2>
+                            <p className="content"></p>
+                        </section>
+                    </Jumbotron>
                 </Route>
                 <Route path="/plugins/scroll">
                     <Suspense fallback={<div>로딩중입니다.</div>}>
