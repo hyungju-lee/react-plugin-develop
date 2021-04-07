@@ -57,5 +57,6 @@
   },
   "devDependencies": {
     "babel-plugin-prismjs": "^2.0.1"
-  }
+  },
+  "homepage": "/react-plugin-page"
 }
