@@ -6,6 +6,8 @@
 }
 .wrap {
   overflow: hidden;
+  background-color: #393e44;
+  color: #fff;
 }
 .scroll-interaction {
   /*IE에서 부드러운 인터렉션을 위해 이 요소에 position: relative 속성은 추가하지 말아주세요*/
@@ -38,4 +40,19 @@
   margin: -16px 0 0 -100px;
   font-size: 24px;
   text-align: center;
+}
+
+.code {
+  pre[class*="language-"] {
+    margin: 0;
+  }
+}
+
+.nav-tabs {
+  border-bottom: none;
+  .nav-link {
+    background-color: #393e44;
+    color: #fff;
+    opacity: 0.6;
+  }
 }

@@ -3,7 +3,8 @@ import React, {useEffect, useState} from "react";
 import {Nav} from 'react-bootstrap';
 import '../scss/Scroll.scss';
 import Prism from 'prismjs';
-import 'prismjs/themes/prism-okaidia.css';
+// import 'prismjs/themes/prism-twilight.css';
+import 'prism-themes/themes/prism-material-oceanic.css'
 import axios from "axios";
 
 function Scroll () {
@@ -64,7 +65,7 @@ function Scroll () {
             </div>
 
 
-            <div style={{overflow: 'auto', position: "fixed", right: 0, bottom: 0, maxWidth: '700px', width: '100%', height: 'calc(100% - 60px)'}}>
+            <div style={{overflow: 'auto', position: "fixed", right: 0, bottom: 0, maxWidth: '700px', width: '100%', maxHeight: 'calc(100% - 56px)'}}>
                 <Nav variant="tabs" defaultActiveKey="link-0">
                     <Nav.Item>
                         <Nav.Link eventKey="link-3" onClick={() => {
@@ -104,7 +105,7 @@ function Code({code, language}) {
         Prism.highlightAll();
     }, [code]);
     return (
-        <div className="Code">
+        <div className="code">
             <pre className="line-numbers">
                 <code className={`language-${language}`}>
                     {code}
